@@ -76,4 +76,4 @@ Implementar una cerradura electrónica, la cual sólo activará la salida si por
 
 En la siguiente dirección electrónica se puede observar la simulación en Wokwi del funcionamiento de la cerradura electrónica, utilizando el ESP32DEVKIT para el control. 
 
-![ESP32 DEVKIT Simulación](https://wokwi.com/projects/376260178423500801)
+[ESP32 DEVKIT Simulación](https://wokwi.com/projects/376260178423500801)
