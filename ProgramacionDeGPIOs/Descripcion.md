@@ -1,3 +1,5 @@
+# Cerradura electrónica básica controlada mediante un ESP32DEVKIT
+
 ## Objetivos
 
 • Identificar las líneas de propósito general de entrada y salida que dispone su tarjeta de desarrollo microcontroladora.
@@ -72,3 +74,6 @@ Implementar una cerradura electrónica, la cual sólo activará la salida si por
 
 ![Circuito Cerradura ESP32DEVKIT](https://github.com/OmarAbundis/ArduinoPracticasBasicas/blob/main/ProgramacionDeGPIOs/Imagenes/CircuitoCerraduraElectronicaESP32DEVKIT.JPG)
 
+En la siguiente dirección electrónica se puede observar la simulación en Wokwi del funcionamiento de la cerradura electrónica, utilizando el ESP32DEVKIT para el control. 
+
+![ESP32 DEVKIT Simulación](https://wokwi.com/projects/376260178423500801)
