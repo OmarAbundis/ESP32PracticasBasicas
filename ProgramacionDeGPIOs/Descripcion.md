@@ -109,8 +109,8 @@ En base a los puntos sugeridos para la solución del problema, identificación d
   * con ocho interruptores y para la comprobación de la activación, el encendido de un LED.
   *
   * Autor: Omar Abundis Noyola
-  * Fecha: 19 de enero 2023
-  * Grupo: EC09S
+  * Fecha: 14 de junio del 2024
+  * Compañia: ZeroZone
   *
   * CONEXIÓN ENTRE DISPOSITIVOS
   *
