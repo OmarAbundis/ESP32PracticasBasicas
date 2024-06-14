@@ -7,10 +7,10 @@
 
 ## Introducción teórica
 
-Como parte de una buena práctica lo primero que se debe de realizar es consultar cuántas líneas de propósito general de entrada y salida (a continuación, simplemente referidas como GPIO) dispone su tarjeta de desarrollo microcontroladora, para ello se consulta el denominado PINOUT Diagram correspondiente a su tarjeta a utilizar. En la figura 1, se muestra el PINOUT Diagram de la tarjeta Arduino UNO.
+Como parte de una buena práctica lo primero que se debe de realizar es consultar cuántas líneas de propósito general de entrada y salida (a continuación, simplemente referidas como GPIO) dispone su tarjeta de desarrollo microcontroladora, para ello se consulta el denominado PINOUT Diagram correspondiente a su tarjeta a utilizar. En la figura 1, se muestra el PINOUT Diagram de la tarjeta ESP32 DEVKIT.
 
 **Figura 1.**
 
 *PINOUT Diagram del Arduino UNO.*
 
-![ESP32 DEVKIT PINOUT](https://github.com/OmarAbundis/ArduinoPracticasBasicas/blob/main/ProgramacionDeGPIOs/Imagenes/ESP32%20DEVKIT%20PINOUT.png)
+![ESP32 DEVKIT PINOUT](D:\GitHub\ArduinoPracticasBasicas\ProgramacionDeGPIOs\Imagenes\ESP32 DEVKIT PINOUT.png)
