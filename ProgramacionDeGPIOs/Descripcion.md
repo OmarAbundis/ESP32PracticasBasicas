@@ -70,5 +70,5 @@ Implementar una cerradura electrónica, la cual sólo activará la salida si por
 
 *Circuito Electrónico de la Cerradura con el ESP32DEVKIT.*
 
-![Circuito Cerradura ESP32DEVKIT](https://github.com/OmarAbundis/ArduinoPracticasBasicas/blob/main/ProgramacionDeGPIOs/Imagenes/ESP32%20DEVKIT%20PINOUT.png)
+![Circuito Cerradura ESP32DEVKIT](https://github.com/OmarAbundis/ArduinoPracticasBasicas/blob/main/ProgramacionDeGPIOs/Imagenes/CircuitoCerraduraElectronicaESP32DEVKIT.JPG)
 
