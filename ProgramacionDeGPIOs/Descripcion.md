@@ -11,4 +11,4 @@ Como parte de una buena práctica lo primero que se debe de realizar es consulta
 
 **Figura 1.**
 *PINOUT Diagram del Arduino UNO.*
-(https://github.com/OmarAbundis/ArduinoPracticasBasicas/blob/main/ProgramacionDeGPIOs/Imagenes/ESP32%20DEVKIT%20PINOUT.png)
+![ESP32 DEVKIT PINOUT](https://github.com/OmarAbundis/ArduinoPracticasBasicas/blob/main/ProgramacionDeGPIOs/Imagenes/ESP32%20DEVKIT%20PINOUT.png)
