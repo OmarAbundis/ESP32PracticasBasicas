@@ -79,12 +79,19 @@ Implementar una cerradura electrónica, la cual sólo activará la salida si por
 Cuando se debe dar solución a un problema combinando circuitos electrónicos y programación es conveniente ser metódico en el planteamiento de la solución, a continuación se sugieren una serie de pasos que resultan útiles para obtener la solución al problema de manera simple.
 
 1 Identificar los datos indicados en el enunciado del problema.
+
 2 Analizar el circuito electrónico que se va a controlar.
+
 3 Describir una serie de pasos ordenados o un diagrama de flujo que guíe en la solución del problema de una manera simple.
+
 4 Escribir el código de programa.
+
 5 Compilar el código para encontrar errores de sintaxis.
+
 6 En la manera de lo posible simular el programa obtenido para identificar errores de lógica.
+
 7 Cargar el programa en la tarjeta microcontroladora y comprobar el correcto funcionamiento del prototipo.
+
 8 Generar un registro con las observaciones del circuito funcionando.
 
 En base a los puntos sugeridos para la solución del problema, identificación de datos y analisis del circuito, se ha realizado el diagrama de flujo mostrado en la figura 3, el cual dentro de sus elementos ya cuenta con pseudocódigo que simplificará la tarea de la programación y de una manera grafica mostrará el camino de la solución.
@@ -93,7 +100,7 @@ En base a los puntos sugeridos para la solución del problema, identificación d
 
 *Diagrama de Flujo para la Cerradura Electrónica Básica con el ESP32DEVKIT.*
 
-![Circuito Cerradura ESP32DEVKIT](https://github.com/OmarAbundis/ArduinoPracticasBasicas/blob/main/ProgramacionDeGPIOs/Imagenes/CircuitoCerraduraElectronicaESP32DEVKIT.JPG)
+![Circuito Cerradura ESP32DEVKIT](https://github.com/OmarAbundis/ArduinoPracticasBasicas/blob/main/ProgramacionDeGPIOs/Imagenes/DiagramaFlujoCerradura.png)
 
 
 
