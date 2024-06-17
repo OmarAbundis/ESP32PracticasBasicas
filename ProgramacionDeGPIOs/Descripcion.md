@@ -58,10 +58,7 @@ digitalRead (pin);		    //”pin” configurado como entrada efectuara la lectur
 
 1 resistor de 120 $\Omega$
 
-
-1 Display de 7 segmentos cátodo común
-
-Protoboard
+1 Protoboard
 
 Alambre con aislante para el armado del circuito electrónico (UTP) o jumpers MM
 
@@ -69,7 +66,7 @@ Pinzas de punta y de corte
 
 ## Desarrollo
 
-Para poner en práctica sus conocimientos en programación en lenguaje C++, configuración de GPIOs y desarrollo de funciones, tiene que realizar lo siguiente:
+Para poner en práctica sus conocimientos en programación en lenguaje C++ y configuración de GPIOs tiene que realizar lo siguiente:
 
 ### Cerradura electrónica
 
@@ -111,9 +108,13 @@ En base a los puntos sugeridos para la solución del problema, identificación d
 
 ### Código del programa de control
 
+El programa se segmenta en las siguientes partes:
+
+1 **Encabezado del programa.** Siguiendo las buenas prácticas, se da una descripción puntual del programa de control.
+
 ~~~
-/** Programa que sirve de cerradura electrónica elemental usando un ESP32 devkit, usando como llave un dipswitch 
-  * con ocho interruptores y para la comprobación de la activación, el encendido de un LED.
+/** Programa que sirve de cerradura electrónica elemental usando un ESP32DEVKIT, usando como llave un dipswitch 
+  * con ocho interruptores y para la comprobación de la activación un LED.
   *
   * Autor: Omar Abundis Noyola
   * Fecha: 14 de junio del 2024
@@ -137,9 +138,20 @@ En base a los puntos sugeridos para la solución del problema, identificación d
   *
   */
 
+  ~~~
+
+2 **Declaración de variables globales.** Para la solución planteada solo se utilizan dos variables globales y como sus valores no cambiarán durante la ejecución del programa se les declara como constantes de tipo **byte**, ya que son valores entre 0 y 255, por lo que una variable de 8 bits es lo óptimo.
+
+~~~~
   const byte led = 2;
   const byte clave = 170;            // Clave = 170d = 10101010b. puede ser B10101010;
-  
+
+~~~~
+
+3 **Función de configuración.** En la estructura de programación en lenguaje C++ para el IDE de Arduino, se usa la palabra reservada **void setup()** seguido de una llave que abre y otra que cierra, {...}, donde los tres puntos representan las sentencias de control que deben de finalizar en punto y coma, por sus reglas de sintaxis. Hay que destacar que solo se ejecuta una vez al enceder la tarjeta microcontroladora en uso y que se encarga de la configuración de los elementos del microcontrolador que se van a utilizar, en nuestro caso las GPIOs.
+
+~~~~
+
   void setup() {                   // Configuración inicial de los elementos a utilizar en la tarjeta.
         
     byte swPin;                      // Variable auxiliar a establecer los pines como entrada.
@@ -152,8 +164,14 @@ En base a los puntos sugeridos para la solución del problema, identificación d
       pinMode(swPin,INPUT);
     }
   }
+
+  ~~~~
+
+  4 **Función de bloque de ejecución continua.** La palabra reservada para tal funcón es **void loop()** seguido de una llave que agre y una llave que cierra, {...}, donde nuevamente los tres puntos van a ser sustituidos pos las instrucciones de control, pero a diferencia de lo que sucede en el void setup(), está función se estará ejecutando todo el tiempo en que este energizada la tarjeta microcontroladora.
+
+  ~~~
   
- //  Función loop se va a ejecutar de manera reiterativa mientras este energizada la UNO32.
+ //  Función loop se va a ejecutar de manera reiterativa mientras este energizada la ESP32DEVKIT.
  
   void loop() {
 
