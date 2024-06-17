@@ -52,11 +52,11 @@ digitalRead (pin);		    //”pin” configurado como entrada efectuara la lectur
 
 1 Dip Switch de 8 posiciones
 
-8 resistores de 10K$\Omega$
+8 resistores de 10K $\Omega$
 
-1 resistor de 330$\omega$
+1 resistor de 330 $\Omega$
 
-1 resistor de 120$\omega$
+1 resistor de 120 $\Omega$
 
 
 1 Display de 7 segmentos cátodo común
