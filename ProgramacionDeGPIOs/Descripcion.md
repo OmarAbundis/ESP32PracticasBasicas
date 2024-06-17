@@ -8,8 +8,6 @@
 
 • Estructurar un programa de control en lenguaje C++ para que el IDE de Arduino permita utilizar la tarjeta de desarrollo microcontroladora como cerradura electrónica para una palabra clave de ocho bits.
 
-• Estructurar un programa de control en lenguaje C++ para el IDE de Arduino permita utilizar la tarjeta de desarrollo microcontroladora como decodificador de un código binario a código hexadecimal.
-
 
 ## Introducción teórica
 
@@ -24,8 +22,8 @@ Como parte de una buena práctica lo primero que se debe de realizar es consulta
 Generalmente a la agrupación de las líneas que permiten la entrada o salida de señales digitales al microcontrolador se le denominan puertos, en algunos microcontroladores se puede realizar su programación en bloque, pero en el caso del ESP32 DEVKIT, su configuración se realiza línea a línea, indicando de qué manera se pretende utilizar.
 La configuración se hace de la siguiente manera:
 
-1.	Se realiza en la parte del programa correspondiente a void setup ()
-2.	Para configurar un pin específico como INPUT (entrada) o como OUTPUT (salida), con la palabra reservada pinMode, después entre paréntesis se indica el número o el nombre del pin seguido de una coma y por último el cómo se quiere utilizar el pin como entrada o salida.
+1.	Se realiza en la parte del programa correspondiente a void setup()
+2.	Para configurar un pin específico como INPUT (entrada) o como OUTPUT (salida), se usa la palabra reservada **pinMode**, después entre paréntesis se indica el número o el nombre del pin seguido de una coma y por último, cómo se quiere utilizar el pin como entrada o salida.
 
 ~~~
 pinMode(pin,OUTPUT);          //ajusta “pin” como salida.
@@ -33,7 +31,7 @@ pinMode(pin,INPUT);          //ajusta “pin” como entrada.
 pinMode(pin,INPUT_PULLUP);   //ajusta “pin” como entrada pull-up.
 ~~~
 
-3.	Y en la parte de ejecución void loop (), se hace uso de las líneas de la siguiente manera:
+3.	Y en la parte de ejecución void loop(), se hace uso de las líneas de la siguiente manera:
 
 ~~~~
 digitalWrite(pin,HIGH);		//”pin” configurado como salida mandará 1 lógico.
@@ -50,11 +48,11 @@ digitalRead (pin);		    //”pin” configurado como entrada efectuara la lectur
 
 ## Materiales
 
-1 Arduino UNO u otra tarjeta de desarrollo con microcontrolador compatible.
+1 ESP32 DEVKIT
 1 Dip Switch de 8 posiciones.
-8 resistores de 10K
-1 resistor de 330
-1 resistor de 120
+8 resistores de 10K\Omega
+1 resistor de 330\Omega
+1 resistor de 120\Omega
 1 Display de 7 segmentos cátodo común
 Protoboard
 Alambre con aislante para el armado del circuito electrónico (UTP) o jumpers MM
