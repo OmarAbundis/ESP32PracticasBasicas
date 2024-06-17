@@ -49,13 +49,21 @@ digitalRead (pin);		    //”pin” configurado como entrada efectuara la lectur
 ## Materiales
 
 1 ESP32 DEVKIT
-1 Dip Switch de 8 posiciones.
-8 resistores de 10K$\Omega$
-1 resistor de 330$\omega$
-1 resistor de 120$\Omega$
+
+1 Dip Switch de 8 posiciones
+
+8 resistores de 10K`$$Omega$$`
+
+1 resistor de 330`$$omega$$`
+
+1 resistor de 120`$$Omega$$`
+
 1 Display de 7 segmentos cátodo común
+
 Protoboard
+
 Alambre con aislante para el armado del circuito electrónico (UTP) o jumpers MM
+
 Pinzas de punta y de corte
 
 ## Desarrollo
