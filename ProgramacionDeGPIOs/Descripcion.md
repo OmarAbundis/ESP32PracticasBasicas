@@ -226,4 +226,4 @@ Resulta que nadie está exento de cometer errores, tales como:
 
 Siendo de los errores más comunes que he observado que cometen los alumnos que están aprendiendo la programación de microcontroladores.
 
-## Espero sinceramente que te sea de utilidad está primera práctica!
+## ¡Espero sinceramente que te sea de utilidad está primera práctica!
