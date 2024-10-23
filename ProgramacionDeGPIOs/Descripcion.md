@@ -82,21 +82,21 @@ Implementar una cerradura electrónica, la cual sólo activará la salida si por
 
 Cuando se debe dar solución a un problema combinando circuitos electrónicos y programación es conveniente ser metódico en el planteamiento de la solución, a continuación se sugieren una serie de pasos que resultan útiles para obtener la solución al problema de manera simple.
 
-1 Identificar los datos indicados en el enunciado del problema.
+1. Identificar los datos indicados en el enunciado del problema.
 
-2 Analizar el circuito electrónico que se va a controlar.
+2. Analizar el circuito electrónico que se va a controlar.
 
-3 Describir una serie de pasos ordenados o un diagrama de flujo que guíe en la solución del problema de una manera simple.
+3. Describir una serie de pasos ordenados o un diagrama de flujo que guíe en la solución del problema de una manera simple.
 
-4 Escribir el código de programa.
+4. Escribir el código de programa.
 
-5 Compilar el código para encontrar errores de sintaxis.
+5. Compilar el código para encontrar errores de sintaxis.
 
-6 En la manera de lo posible simular el programa obtenido para identificar errores de lógica.
+6. En la manera de lo posible simular el programa obtenido para identificar errores de lógica.
 
-7 Cargar el programa en la tarjeta microcontroladora y comprobar el correcto funcionamiento del prototipo.
+7. Cargar el programa en la tarjeta microcontroladora y comprobar el correcto funcionamiento del prototipo.
 
-8 Generar un registro con las observaciones del circuito funcionando.
+8. Generar un registro con las observaciones del circuito funcionando.
 
 En base a los puntos sugeridos para la solución del problema, identificación de datos y analisis del circuito, se ha realizado el diagrama de flujo mostrado en la figura 3, el cual dentro de sus elementos ya cuenta con pseudocódigo que simplificará la tarea de la programación y de una manera grafica mostrará el camino de la solución.
 
@@ -110,7 +110,7 @@ En base a los puntos sugeridos para la solución del problema, identificación d
 
 El programa se segmenta en las siguientes partes:
 
-1 **Encabezado del programa.** Siguiendo las buenas prácticas, se da una descripción puntual del programa de control.
+1. **Encabezado del programa.** Siguiendo las buenas prácticas, se da una descripción puntual del programa de control.
 
 ~~~
 /** Programa que sirve de cerradura electrónica elemental usando un ESP32DEVKIT, usando como llave un dipswitch 
@@ -140,15 +140,15 @@ El programa se segmenta en las siguientes partes:
 
   ~~~
 
-2 **Declaración de variables globales.** Para la solución planteada solo se utilizan dos variables globales y como sus valores no cambiarán durante la ejecución del programa se les declara como constantes de tipo **byte**, ya que son valores entre 0 y 255, por lo que una variable de 8 bits es lo óptimo.
+2. **Declaración de variables globales.** Para la solución planteada solo se utilizan dos variables globales y como sus valores no cambiarán durante la ejecución del programa se les declara como constantes de tipo **byte**, ya que son valores entre 0 y 255, por lo que una variable de 8 bits es lo óptimo.
 
 ~~~~
   const byte led = 2;
-  const byte clave = 170;            // Clave = 170d = 10101010b. puede ser B10101010;
+  const byte clave = 170;            // Clave = 170d = 10101010b, puede ser B10101010
 
 ~~~~
 
-3 **Función de configuración.** En la estructura de programación en lenguaje C++ para el IDE de Arduino, se usa la palabra reservada **void setup()** seguido de una llave que abre y otra que cierra, {...}, donde los tres puntos representan las sentencias de control que deben de finalizar en punto y coma, por sus reglas de sintaxis. Hay que destacar que solo se ejecuta una vez al enceder la tarjeta microcontroladora en uso y que se encarga de la configuración de los elementos del microcontrolador que se van a utilizar, en nuestro caso las GPIOs.
+3. **Función de configuración.** En la estructura de programación en lenguaje C++ para el IDE de Arduino, se usa la palabra reservada **void setup()** seguido de una llave que abre y otra que cierra, {...}, donde los tres puntos representan las sentencias de control que deben de finalizar en punto y coma, por sus reglas de sintaxis. Hay que destacar que solo se ejecuta una vez al enceder la tarjeta microcontroladora en uso y que se encarga de la configuración de los elementos del microcontrolador que se van a utilizar, en nuestro caso las GPIOs.
 
 ~~~~
 
@@ -167,7 +167,7 @@ El programa se segmenta en las siguientes partes:
 
   ~~~~
 
-  4 **Función de bloque de ejecución continua.** La palabra reservada para tal funcón es **void loop()** seguido de una llave que agre y una llave que cierra, {...}, donde nuevamente los tres puntos van a ser sustituidos pos las instrucciones de control, pero a diferencia de lo que sucede en el void setup(), está función se estará ejecutando todo el tiempo en que este energizada la tarjeta microcontroladora.
+  4. **Función de bloque de ejecución continua.** La palabra reservada para tal funcón es **void loop()** seguido de una llave que abre y una llave que cierra, {...}, donde nuevamente los tres puntos van a ser sustituidos pos las instrucciones de control, pero a diferencia de lo que sucede en el void setup(), está función se estará ejecutando todo el tiempo en que este energizada la tarjeta microcontroladora.
 
   ~~~
   
@@ -207,3 +207,23 @@ El programa se segmenta en las siguientes partes:
 En la siguiente dirección electrónica se puede observar la simulación en Wokwi del funcionamiento de la cerradura electrónica, utilizando el ESP32DEVKIT para el control. 
 
 [ESP32 DEVKIT Simulación](https://wokwi.com/projects/376260178423500801)
+
+Cuando en el simulador se observa que el circuito electrónico realiza todo lo descrito en el enunciado del problema, se tiene un 90% de seguridad de que va a funcionar el prototipo. ¿Por qué del 90%?
+
+Resulta que nadie está exento de cometer errores, tales como:
+
+* No tener cuidado en las conexiones de los elementos electrónicos.
+* Que algún *jumper*, que se suelen utilizar mucho para el rápido armado, tenga algún defecto de fábrica.
+* Olvidar la conexión de las terminales de polarización.
+* Conectar de manera inversa el LED.
+* Colocarle un resistor limitador de corriente den un valor incorrecto, muchas veces al confundir su código de colores.
+* No tener presente el funcionamiento de una conexión *pull-up* del dip switch, la opción *OFF* es un 1 lógico y *ON* es el 0 lógico en el ingreso de los datos.
+* No tener actualizado el IDE de Arduino.
+* No elegir el COM donde se tiene conectada la tarjeta microcontroladora.
+* Cable USB dañado.
+* No haber configurado las bibliotecas correspondientes para reconocer las tarjetas microcontroladoras en el IDE de Arduino.
+* No seleccionar el modelo de la tarjeta microcontroladora que se pretende usar.
+
+Siendo de los errores más comunes que he observado que cometen los alumnos que están aprendiendo la programación de microcontroladores.
+
+## Espero sinceramente que te sea de utilidad está primera práctica!
